@@ -1,0 +1,5 @@
+.border {
+    margin: 15px 0;
+    border: 2px dashed;
+    display: inline-block;
+}
