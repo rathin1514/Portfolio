@@ -2,10 +2,29 @@ import React from "react";
 import '../css/header.css'
 
 function Header() {
+
+    let now = new Date();
+    const day = now.toDateString();
+    const time = now.toLocaleTimeString();
+    function getBrowserName() {
+        const userAgent = navigator.userAgent;
+    
+        if (userAgent.includes("Chrome") && userAgent.includes("Edg/")) return "Microsoft Edge";
+        if (userAgent.includes("Chrome") && !userAgent.includes("Edg/")) return "Google Chrome";
+        if (userAgent.includes("Firefox")) return "Mozilla Firefox";
+        if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) return "Safari";
+        if (userAgent.includes("OPR") || userAgent.includes("Opera")) return "Opera";
+        if (userAgent.includes("MSIE") || userAgent.includes("Trident")) return "Internet Explorer"; // Legacy
+    
+        return "Unknown Browser";
+    }
+    
+    const browser = getBrowserName();
+
     return (
         <header>
-            <p>Last login: Thu Mar 6 15:21:34 on ttys000</p>
-            <p> <span className="sg left">[</span>user@RATHINs-MacBook-Air ~ % portfolio</p>
+            <p>Last login: {day} {time} on ttys000</p>
+            <p> <span className="sg left">[</span>user@Browser-{browser} ~ % portfolio</p>
             <div className="border">
                 <div>
                     <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +97,35 @@ function Header() {
                     </svg>
                 </div>
             </div>
+            <p class="sub-header">Available commands:</p>
+    <div class="command-container">
+        <div class="command-columns">
+            <div class="commands">
+                <p>home</p>
+            </div>
+            <div class="description">
+                <p>Takes you back to the home page</p>
+            </div>
+            <div class="commands">
+                <p>contact</p>
+            </div>
+            <div class="description">
+                <p>Shows contact information and links to social media profiles</p>
+            </div>
+            <div class="commands">
+                <p>about</p>
+            </div>
+            <div class="description">
+                <p>Brief information about me</p>
+            </div>
+            <div class="commands">
+                <p>projects</p>
+            </div>
+            <div class="description">
+                <p>Lists all the projects I made with deployment/gitHub links and technology stack used for respective project</p>
+            </div>
+        </div>
+    </div>
         </header>
     );
 }
