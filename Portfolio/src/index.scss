@@ -1,0 +1,59 @@
+$primary-green: #31d400;
+$primary-red: #d80000;
+$primary-blue: #0000ff;
+$primary-yellow: #e1e100;
+
+$secondary-green: #249800;
+$secondary-red: #820000;
+$secondary-blue: #0000a6;
+$secondary-yellow: #888800;
+
+body {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  padding: 0;
+  margin: 0 7px;
+  background-color: black;
+  color: $primary-green;
+}
+
+p {
+  margin: 0px;
+  line-height: 18px;
+}
+
+.pg {
+  color: $primary-green;
+}
+
+.sg {
+  color: $secondary-green;
+}
+
+.pr {
+  color: $primary-red;
+}
+
+.sr {
+  color: $secondary-red;
+}
+
+.pb {
+  color: $primary-blue;
+}
+
+.sb {
+  color: $secondary-blue;
+}
+
+.py {
+  color: $primary-yellow;
+}
+
+.sy {
+  color: $secondary-yellow;
+}
+
+button:hover {
+  border-color: #646cff;
+}

@@ -1,0 +1,22 @@
+.border {
+    margin: 15px 0;
+    border: 2px dashed;
+    display: inline-block;
+}
+
+.command-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.command-columns {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+.sub-header{
+    margin-bottom: 5px;
+}

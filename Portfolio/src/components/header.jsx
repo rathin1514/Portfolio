@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/header.css'
+import '../css/header.scss'
 
 function Header() {
 
@@ -97,31 +97,31 @@ function Header() {
                     </svg>
                 </div>
             </div>
-            <p class="sub-header">Available commands:</p>
-    <div class="command-container">
-        <div class="command-columns">
-            <div class="commands">
+            <p className="sub-header">Available commands:</p>
+    <div className="command-container">
+        <div className="command-columns">
+            <div className="commands">
                 <p>home</p>
             </div>
-            <div class="description">
+            <div className="description">
                 <p>Takes you back to the home page</p>
             </div>
-            <div class="commands">
+            <div className="commands">
                 <p>contact</p>
             </div>
-            <div class="description">
+            <div className="description">
                 <p>Shows contact information and links to social media profiles</p>
             </div>
-            <div class="commands">
+            <div className="commands">
                 <p>about</p>
             </div>
-            <div class="description">
+            <div className="description">
                 <p>Brief information about me</p>
             </div>
-            <div class="commands">
+            <div className="commands">
                 <p>projects</p>
             </div>
-            <div class="description">
+            <div className="description">
                 <p>Lists all the projects I made with deployment/gitHub links and technology stack used for respective project</p>
             </div>
         </div>
