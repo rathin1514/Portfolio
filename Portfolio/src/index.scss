@@ -1,3 +1,7 @@
+:root {
+  cursor: text;
+}
+
 $primary-green: #31d400;
 $primary-red: #d80000;
 $primary-blue: #1f9eff;
@@ -54,6 +58,12 @@ p {
   color: $secondary-yellow;
 }
 
-button:hover {
-  border-color: #646cff;
+.contact {
+  .link {
+    color: $primary-green;
+  }
+
+  .link:hover {
+    color: $secondary-green;
+  }
 }

@@ -122,7 +122,7 @@ function Header() {
                 <p>projects</p>
             </div>
             <div className="description">
-                <p>Lists all the projects I made with deployment/gitHub links and technology stack used for respective project</p>
+                <p>Lists all the projects I made with deployment/GitHub links and technology stack used for respective project</p>
             </div>
         </div>
     </div>

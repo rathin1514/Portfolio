@@ -9,9 +9,9 @@ path {
 
 .section-route {
   display: inline-block;
-  background-color: rgba(128, 128, 128, 0.556);
+  background-color: #252525;
   padding: 0.5px 0px;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 
 .route-rt {
@@ -36,4 +36,8 @@ path {
   position: relative;
   top: 1px;
   right: 10px;
+}
+
+.link {
+  text-decoration: none;
 }
