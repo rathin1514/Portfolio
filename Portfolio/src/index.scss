@@ -17,6 +17,8 @@ $secondary-blue: #18729f;
 $secondary-yellow: #888800;
 
 body {
+  min-width: 596px;
+  width: 100%; 
   font-family: "Roboto Mono", monospace;
   display: flex;
   padding: 0;
