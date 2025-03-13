@@ -34,8 +34,14 @@ path {
 
 .route-command {
   position: relative;
-  top: 1px;
+  top: 0px;
   right: 10px;
+}
+
+.route-command-cli {
+  position: relative;
+  top: 0px;
+  right: 14px;
 }
 
 .link {

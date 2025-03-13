@@ -7,6 +7,7 @@ function Command() {
 
     const [commands, setCommands] = useState([]);
     const [input, setInput] = useState("");
+    const [cursorRight, setCursorRight] = useState(-5);
     const terminalEndRef = useRef(null); 
 
     const commandComponents = {
@@ -27,10 +28,13 @@ function Command() {
     };
 
     useEffect(() => {
+        setCursorRight(-5 - input.length * 10); // Adjust cursor position based on input length
+    }, [input]);
+
+    useEffect(() => {
         terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [commands]);
-
-
+    
     return (
 
         <>
@@ -46,7 +50,8 @@ function Command() {
 
                 <section className="command" id="command-section">
                     <p className="section-route pb"><span className="left sb">&#91;</span>&nbsp;~<span className="sb">/User/Projects/GitHub/</span>portfolio/src&nbsp; &nbsp;<span className="py"> Main &nbsp;</span></p><span className="route-rb">〉</span><span className="route-rt">⏵</span>
-                    <span className="route-command">
+                    <span className="route-command-cli">
+                    <div className="blinking-cursor" style={{ right: `${cursorRight}px` }}></div>
                         <input className="input-field"  value={input}
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={handleCommand} required />

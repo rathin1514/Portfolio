@@ -85,13 +85,29 @@ p {
   color: $primary-green;
   background-color: transparent;
   border: none;
+  caret-color: transparent;
   font-size: 16px;
   position: relative;
-  top: 1px;
-  right: 5px;
+  right: 6px;
 
   &:focus {
     border: none;
     outline: none;
   }
+}
+
+.blinking-cursor {
+  position: relative;
+  top: 5px;
+  right: -5px;
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  background-color: $secondary-green;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
