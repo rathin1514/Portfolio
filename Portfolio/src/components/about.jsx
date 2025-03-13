@@ -1,24 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useEffect, useRef } from "react";
 import '../css/about.scss';
 import profileImage from "../assets/boy.png";
 
 function About() {
 
     const asciiArtRef = useRef(null);
+    const terminalEndRef = useRef(null);
 
-        const textLines = [
-            "Hey, I'm Rathin, a Computer Science student at Hochschule Hof with a strong interest in software development, web technologies, and problem-solving. I thrive on building efficient, scalable, and user-friendly applications.",
-            "I specialize in developing both frontend and backend solutions. Whether it's crafting dynamic web applications or designing intuitive user interfaces, I enjoy every aspect of the development process. Beyond coding, I love exploring new technologies, landscapes and adventure activities. My portfolio showcases a range of projects, from full-stack web applications to software solutions, demonstrating my ability to tackle complex challenges. Feel free to explore my work and don't hesitate to reach out!",
-            "Programming Languages: Java, JavaScript, PHP",
-            "Frameworks: ReactJS, Laravel, Express.js, Sass, Bootstrap",
-        ];
-    
-        const [displayedLines, setDisplayedLines] = useState([]);
-        const [currentLineIndex, setCurrentLineIndex] = useState(0);
-    
-        useEffect(() => {
+    useEffect(() => {
 
-            const canvas = document.createElement("canvas");
+        const canvas = document.createElement("canvas");
         const ctx = canvas.getContext("2d");
         const img = new Image();
         img.crossOrigin = "Anonymous";
@@ -49,49 +40,20 @@ function About() {
                 output += line + "\n";
             }
 
-            // Set the output inside the ref
+            if (asciiArtRef.current) {
+                asciiArtRef.current.textContent = output;
+            }
+
             setTimeout(() => {
-                if (asciiArtRef.current) {
-                    asciiArtRef.current.textContent = output;
-                }
-            }, 150);
-            
+                terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+
         };
 
-            /*if (currentLineIndex < textLines.length) {
-                let i = 0;
-                const line = textLines[currentLineIndex];
-                setCurrentText(""); // Reset before typing
-    
-                const typingInterval = setInterval(() => {
-                    if (i < line.length) {
-                        setCurrentText((prev) => prev + line[i]);
-                        i++;
-                    } else {
-                        clearInterval(typingInterval);
-                        setTimeout(() => {
-                            setDisplayedLines((prevLines) => [...prevLines, line]);
-                            setCurrentLineIndex((prevIndex) => prevIndex + 1);
-                        }, 10); // Pause before next line
-                    }
-                }, 0.01); // Typing speed
-    
-                return () => clearInterval(typingInterval);
-            }
-        }, [currentLineIndex]); // Runs when currentLineIndex changes */
-
-        if (currentLineIndex < textLines.length) {
-            const lineTimeout = setTimeout(() => {
-                setDisplayedLines((prevLines) => [...prevLines, textLines[currentLineIndex]]);
-                setCurrentLineIndex((prevIndex) => prevIndex + 1);
-            }, 150); // Adjust speed here
-
-            return () => clearTimeout(lineTimeout);
-        }
-    }, [currentLineIndex]); // Runs when currentLineIndex changes
+    }, []);
 
     return (
-        <div className="about" id="about-section">
+        <section className="about" id="about-section">
             <p className="section-route pb"><span className="left sb">&#91;</span>&nbsp;~<span className="sb">/User/Projects/GitHub/</span>portfolio/src&nbsp; &nbsp;<span className="py"> Main &nbsp;</span></p><span className="route-rb">〉</span><span className="route-rt">⏵</span><span className="route-command">about</span>
             <div className="about-description">
                 <div>
@@ -99,16 +61,18 @@ function About() {
                 </div>
 
                 <div>
-                    {displayedLines.map((line, index) => (
-                        <React.Fragment key={index}>
-                            <p>{line}</p>
-                            <br />
-                        </React.Fragment>
-                    ))}
+                    <p>Hey, I'm Rathin, a Computer Science student at Hochschule Hof with a strong interest in software development, web technologies, and problem-solving. I thrive on building efficient, scalable, and user-friendly applications.</p>
+                    <br/>
+                    <p>I specialize in developing both frontend and backend solutions. Whether it's crafting dynamic web applications or designing intuitive user interfaces, I enjoy every aspect of the development process. Beyond coding, I love exploring new technologies, landscapes and adventure activities. My portfolio showcases a range of projects, from full-stack web applications to software solutions, demonstrating my ability to tackle complex challenges. Feel free to explore my work and don't hesitate to reach out!</p>
+                    <br />
+                    <p>Programming Languages: Java, JavaScript, PHP</p>
+                    <br />
+                    <p>Frameworks: ReactJS, Laravel, Express.js, Sass, Bootstrap</p>
                 </div>
             </div>
-
-        </div>
+            {/* Invisible div to trigger scrolling after rendering */}
+            <div ref={terminalEndRef}></div>
+        </section>
     );
 
 }

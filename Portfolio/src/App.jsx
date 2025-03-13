@@ -3,15 +3,14 @@ import Header from './components/header'
 import About from './components/about'
 import Contact from './components/contact'
 import Project from './components/project'
+import Command from './components/command-line'
 
 function App() {
 
   return (
     <>
     <Header />
-    <About />
-    <Contact />
-    <Project />
+    <Command />
     </>
   )
 }
