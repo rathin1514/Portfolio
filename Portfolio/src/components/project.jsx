@@ -57,7 +57,7 @@ function Project() {
                 <div className="qr-code">
                     <br />
                     <img src={Amazon} alt="qr-code" />
-                    <a onClick={() => openModal("i8QD29fljqw")} className="link qr-link" target="_blank">&#91;e-Commerce&#93;</a>
+                    <a href="https://rathin1514.github.io/Amazon/" className="link" target="_blank">&#91;e-Commerce&#93;</a>
                 </div>
                 <div>
                     <p className="sy">Amazon Clone:</p>
@@ -67,7 +67,7 @@ function Project() {
                     <br />
                     <p>Tech Stack: &#91;JavaScript&#93;  &#91;HTML&#93;  &#91;CSS&#93;</p>
                     <br />
-                    <p>GitHub link: <a href="https://rathin1514.github.io/Amazon/" className="link" target="_blank">&#91;GitHub&#93;</a></p>
+                    <p>GitHub link: <a href="https://github.com/rathin1514/Amazon" className="link" target="_blank">&#91;GitHub&#93;</a></p>
                 </div>
             </div>
 
