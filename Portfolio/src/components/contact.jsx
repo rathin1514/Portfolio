@@ -5,7 +5,7 @@ function Contact() {
 
     return (
         <section className="contact" id="contact-section">
-            <p className="section-route pb"><span className="left sb">&#91;</span>&nbsp;~<span className="sb">/User/Projects/GitHub/</span>portfolio/src&nbsp; &nbsp;<span className="py"> Main &nbsp;</span></p><span className="route-rb">〉</span><span className="route-rt">&#9654;</span><span className="route-command">contact</span>
+            <p className="section-route pb"><span className="left sb">&#91;</span>&nbsp;~<span className="sb">/User/Projects/GitHub/</span>portfolio/src&nbsp; &nbsp;<span className="py"> Main &nbsp;</span></p><span className="route-rb">〉</span><span className="route-rt">⏵</span><span className="route-command">contact</span>
             <div className="contact-description">
             <p>Name: Rathin Rachhadiya</p>
             <br />

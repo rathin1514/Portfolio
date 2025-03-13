@@ -2,6 +2,10 @@
   cursor: text;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 $primary-green: #31d400;
 $primary-red: #d80000;
 $primary-blue: #1f9eff;
@@ -16,9 +20,11 @@ body {
   font-family: "Roboto Mono", monospace;
   display: flex;
   padding: 0;
-  margin: 0 7px;
+  margin: 0px 15px 0px 7px;
   background-color: black;
   color: $primary-green;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
 }
 
 p {
@@ -58,12 +64,18 @@ p {
   color: $secondary-yellow;
 }
 
-.contact {
-  .link {
+.contact .link {
     color: $primary-green;
-  }
 
-  .link:hover {
+  &:hover {
     color: $secondary-green;
+  }
+}
+ 
+.project-description .link {
+    color: $primary-yellow;
+
+  &:hover {
+    color: $secondary-yellow;
   }
 }
