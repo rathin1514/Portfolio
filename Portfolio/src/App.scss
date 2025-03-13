@@ -6,3 +6,34 @@ path {
   position: absolute;
   left: 0px;
 }
+
+.section-route {
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.556);
+  padding: 0.5px 0px;
+  padding-bottom: 3px;
+}
+
+.route-rt {
+  position: relative;
+  top: 6.5px;
+  right: 23px;
+  color: gray;
+  font-size: 26px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.route-rb {
+  position: relative;
+  top: 4px;
+  right: 80px;
+  color: gray;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.route-command {
+  position: relative;
+  top: 1px;
+  right: 10px;
+}

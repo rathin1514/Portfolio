@@ -1,0 +1,24 @@
+.about {
+    padding-top: 30px;
+}
+
+.about-description {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.ascii-art {
+    font-size: 10px;
+}
+
+@media (max-width: 800px) {
+    .about-description {
+        grid-template-columns: 1fr;
+        margin: auto;
+        padding-top: 9px;
+        justify-items: center;
+        gap: 15px;
+    }
+}

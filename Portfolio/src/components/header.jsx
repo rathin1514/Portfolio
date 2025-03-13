@@ -22,7 +22,7 @@ function Header() {
     const browser = getBrowserName();
 
     return (
-        <header>
+        <header id="header-section">
             <p>Last login: {day} {time} on ttys000</p>
             <p> <span className="sg left">[</span>user@Browser-{browser} ~ % portfolio</p>
             <div className="border">
@@ -97,14 +97,14 @@ function Header() {
                     </svg>
                 </div>
             </div>
-            <p className="sub-header">Available commands:</p>
+            <p className="sub-header sy">Available commands:</p>
     <div className="command-container">
         <div className="command-columns">
             <div className="commands">
                 <p>home</p>
             </div>
             <div className="description">
-                <p>Takes you back to the home page</p>
+                <p>Takes you back to the home page and clears the console</p>
             </div>
             <div className="commands">
                 <p>contact</p>
