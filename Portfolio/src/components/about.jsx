@@ -63,7 +63,9 @@ function About() {
                 <div>
                     <p>Hey, I'm Rathin, a Computer Science student at Hochschule Hof with a strong interest in software development, web technologies, and problem-solving. I thrive on building efficient, scalable, and user-friendly applications.</p>
                     <br/>
-                    <p>I specialize in developing both frontend and backend solutions. Whether it's crafting dynamic web applications or designing intuitive user interfaces, I enjoy every aspect of the development process. Beyond coding, I love exploring new technologies, landscapes and adventure activities. My portfolio showcases a range of projects, from full-stack web applications to software solutions, demonstrating my ability to tackle complex challenges. Feel free to explore my work and don't hesitate to reach out!</p>
+                    <p>I specialize in developing both frontend and backend solutions. Whether it's crafting dynamic web applications or designing intuitive user interfaces, I enjoy every aspect of the development process.</p>
+                    <br />
+                    <p>Beyond coding, I love exploring new technologies, landscapes and adventure activities. My portfolio showcases a range of projects, from full-stack web applications to software solutions, demonstrating my ability to tackle complex challenges. Feel free to explore my work and don't hesitate to reach out!</p>
                     <br />
                     <p>Programming Languages: Java, JavaScript, PHP</p>
                     <br />

@@ -9,6 +9,7 @@ function Command() {
     const [input, setInput] = useState("");
     const [cursorRight, setCursorRight] = useState(-5);
     const terminalEndRef = useRef(null); 
+    const inputRef = useRef(null);
 
     const commandComponents = {
         about: About,
@@ -32,6 +33,12 @@ function Command() {
     }, [input]);
 
     useEffect(() => {
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      }, []);
+
+    useEffect(() => {
         terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [commands]);
     
@@ -52,9 +59,11 @@ function Command() {
                     <p className="section-route pb"><span className="left sb">&#91;</span>&nbsp;~<span className="sb">/User/Projects/GitHub/</span>portfolio/src&nbsp; &nbsp;<span className="py"> Main &nbsp;</span></p><span className="route-rb">〉</span><span className="route-rt">⏵</span>
                     <span className="route-command-cli">
                     <div className="blinking-cursor" style={{ right: `${cursorRight}px` }}></div>
-                        <input className="input-field"  value={input}
+                        <input type="text" name="command-line" className="input-field"  value={input}
                             onChange={(e) => setInput(e.target.value)}
-                            onKeyDown={handleCommand} required />
+                            ref={inputRef}
+                            autoComplete="off"
+                            onKeyDown={handleCommand} required /> <input type="text" style={{ display: 'none' }} name="username" autoComplete="off" />
                     </span>
                 </section>
 
